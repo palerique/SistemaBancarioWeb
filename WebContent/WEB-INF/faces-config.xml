@@ -13,11 +13,17 @@
 </managed-bean>
 
 <navigation-rule>
-<from-view-id>/CadastroDeCorrentista.jsp</from-view-id>
-<navigation-case>
-<from-outcome>consulta</from-outcome>
-<to-view-id>/ListaCorrentistas.jsp</to-view-id>
-</navigation-case>
+ <from-view-id>/ListaCorrentistas.jsp</from-view-id>
+ <navigation-case>
+  <from-outcome>editar</from-outcome>
+  <to-view-id>/CadastroDeCorrentista.jsp</to-view-id>
+ </navigation-case>
+ <navigation-case>
+  <from-outcome>novo</from-outcome>
+  <to-view-id>/CadastroDeCorrentista.jsp</to-view-id>
+ </navigation-case>
 </navigation-rule>
 
 </faces-config>
+
+

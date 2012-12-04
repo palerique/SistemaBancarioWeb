@@ -40,4 +40,17 @@ public class ControladorCorrentista {
 		// Apos a gravacao, abre a tela de consulta
 		return "consulta";
 	}
+	
+	  public String mostraDados() {
+		    Object objetoSelecionado = modelo.getRowData();
+		    setCorrentista((Correntista) objetoSelecionado);
+		    return "editar";
+		  }
+
+		  public String excluir() {
+		    Correntista correntistaSelecionado = (Correntista) modelo.getRowData();
+		    fachadaCorrentista.excluir(correntistaSelecionado);
+		    return "consulta";
+		  }
+
 }

@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13546596146080" configfile="/SistemaBancarioWeb/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13546596146080" configfile="/SistemaBancarioWeb/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="CadastroDeCorrentista" x="122" y="178" id="pf13546637350001" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" inlinks="pf13546637350002 pf13546637350003" path="/CadastroDeCorrentista.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="ListaCorrentistas" x="338" y="178" id="pf13546637350014" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf13546637350002 pf13546637350003" path="/ListaCorrentistas.jsp"/>
+  <links id="pf13546637350002" target="pf13546637350001" source="pf13546637350014" outcome="editar"/>
+  <links id="pf13546637350003" target="pf13546637350001" source="pf13546637350014" outcome="novo"/>
+</pageflow:Pageflow>
