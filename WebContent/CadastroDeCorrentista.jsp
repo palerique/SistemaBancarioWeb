@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
 <%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
 <html>
-<link rel="stylesheet" href="http://marcoreis.net/css/estilo.css" type="text/css">
+<link rel="stylesheet" href="css/estilo.css" type="text/css">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cadastro de Correntista</title>
