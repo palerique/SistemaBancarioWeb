@@ -23,6 +23,28 @@ pageEncoding="ISO-8859-1"%>
 </f:facet>
 <h:outputText value="#{correntista.nome}"></h:outputText>
 </h:column>
+
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="Endereço" />
+</f:facet>
+<h:outputText value="#{correntista.endereco}"></h:outputText>
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="Telefone" />
+</f:facet>
+<h:outputText value="#{correntista.telefone}"></h:outputText>
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="Data de nascimento" />
+</f:facet>
+<h:outputText value="#{correntista.dataDeNascimento}"></h:outputText>
+</h:column>
 <h:column>
 <h:commandButton image="imagens/edit.png" action="#{controladorCorrentista.mostraDados}"
 alt="Editar Correntista" />&nbsp;&nbsp;
