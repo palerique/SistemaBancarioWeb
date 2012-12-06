@@ -41,7 +41,7 @@ pageEncoding="ISO-8859-1"%>
 
 <h:column>
 <f:facet name="header">
-<h:outputText value="Data de nascimento" />
+<h:outputText value="Nascimento" />
 </f:facet>
 <h:outputText value="#{correntista.dataDeNascimento}"></h:outputText>
 </h:column>

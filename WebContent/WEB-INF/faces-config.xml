@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<faces-config
-    xmlns="http://java.sun.com/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
-    version="2.0">
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
 
-<managed-bean>
-<managed-bean-name>controladorCorrentista</managed-bean-name>
-<managed-bean-class>org.financeiro.apresentacao.ControladorCorrentista</managed-bean-class>
-<managed-bean-scope>request</managed-bean-scope>
-</managed-bean>
+	<managed-bean>
+		<managed-bean-name>controladorCorrentista</managed-bean-name>
+		<managed-bean-class>org.financeiro.apresentacao.ControladorCorrentista</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
 
-<navigation-rule>
- <from-view-id>/ListaCorrentistas.jsp</from-view-id>
- <navigation-case>
-  <from-outcome>editar</from-outcome>
-  <to-view-id>/CadastroDeCorrentista.jsp</to-view-id>
- </navigation-case>
- <navigation-case>
-  <from-outcome>novo</from-outcome>
-  <to-view-id>/CadastroDeCorrentista.jsp</to-view-id>
- </navigation-case>
-</navigation-rule>
+	<managed-bean>
+		<managed-bean-name>controladorConta</managed-bean-name>
+		<managed-bean-class>org.financeiro.apresentacao.ControladorConta</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<navigation-rule>
+		<from-view-id>/ListaCorrentistas.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>editar</from-outcome>
+			<to-view-id>/CadastroDeCorrentista.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>novo</from-outcome>
+			<to-view-id>/CadastroDeCorrentista.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/CadastroDeCorrentista.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>consulta</from-outcome>
+			<to-view-id>/ListaCorrentistas.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<converter>
+		<converter-id>ConversorEnumTipoDeConta</converter-id>
+		<converter-class>org.financeiro.apresentacao.ConversorEnumTipoDeConta</converter-class>
+	</converter>
+
 
 </faces-config>
-
-
